@@ -1,0 +1,205 @@
+/* Configurações Gerais e Cores Base */
+:root {
+    --cor-fundo: hsl(337, 100%, 87%);
+    --cor-card: lab(86.32% 19.42 3.54);
+    --cor-texto: #fffeff;
+    --cor-primaria: hwb(355 55% 0%); /* Vermelho Kasane Teto */
+    --cor-secundaria: hsl(355, 84%, 81%);
+    --borda-suave:  #ff4757;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Menu de Acessibilidade */
+.menu-acessibilidade {
+    background-color: hsl(0, 4%, 14%);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-acessibilidade button {
+    background: hwb(330 7% 85%);
+    color: hsl(340, 39%, 35%);
+    border: 1px solid var(--cor-primaria);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu-acessibilidade button:hover {
+    background: var(--cor-primaria);
+}
+
+/* Container */
+.container-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho do Blog */
+.cabecalho-blog {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid var(--borda-suave);
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.meta-blog {
+    font-size: 14px;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo-blog {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.titulo-blog .parte-um {
+    color: #fff;
+}
+
+.titulo-blog .parte-dois {
+    color: var(--cor-primaria);
+    display: block;
+    font-size: 1.5rem;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+.navegacao-principal a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacao-principal a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Layout em Grid (Conteúdo + Lateral) */
+.layout-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .layout-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    background-color: var(--cor-card);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.conteudo-principal h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* Galeria de Imagens Modernizada */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 6px;
+    border: 2px solid var(--borda-suave);
+    background: #000;
+    height: 200px; /* Mantém um padrão visual */
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz as fotos cortarem proporcionalmente sem amassar */
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Barra Lateral */
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget-blog {
+    background-color: var(--cor-card);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.widget-blog h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--borda-suave);
+    padding-bottom: 5px;
+}
+
+.widget-blog ul {
+    list-style: none;
+}
+
+.widget-blog ul li {
+    margin: 8px 0;
+}
+
+.widget-blog ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.widget-blog ul li a:hover {
+    color: var(--cor-primaria);
+    padding-left: 5px;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    color: var(--cor-secundaria);
+    font-size: 14px;
+    border-top: 1px solid var(--borda-suave);
+}
